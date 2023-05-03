@@ -1,0 +1,21 @@
+<table>
+    <thead>
+      <tr>
+        <th (click)="sort('partner', 'asc')">Partner</th>
+        <th (click)="sort('totalSales', 'desc')">Total Sales</th>
+        <th (click)="sort('transactionCount', 'desc')">Transaction Count</th>
+        <th (click)="sort('mostActiveRegion', 'asc')">Most Active Region</th>
+        <th (click)="sort('mostActiveCountry', 'asc')">Most Active Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let partner of partnersData">
+        <td>{{ partner.partner }}</td>
+        <td>{{ partner.totalSales }}</td>
+        <td>{{ partner.transactionCount }}</td>
+        <td>{{ partner.mostActiveRegion }}</td>
+        <td>{{ partner.mostActiveCountry }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
