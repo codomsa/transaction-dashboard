@@ -1,0 +1,12 @@
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  
+  .export-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  

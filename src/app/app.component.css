@@ -1,0 +1,51 @@
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bar-charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bar-charts app-bar-chart-total-sales,
+  .bar-charts app-bar-chart-transaction-volume {
+    width: 1400%;
+    height: 1000%;
+    max-width: 1800px; 
+  }
+  
+  .pie-charts {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px;
+  }
+
+  .title-container h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+ 
+.dashboard-title {
+    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #13021f;
+    margin-bottom: 1rem;
+  }
+  

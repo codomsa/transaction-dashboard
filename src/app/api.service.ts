@@ -11,22 +11,26 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getTransactionVolumes(): Observable<any> {
-    return this.http.get(this.apiUrl + 'transaction-volumes');
+    return this.http.get(this.apiUrl + '/api/transaction-volumes');
   }
 
   getTotalSales(): Observable<any> {
-    return this.http.get(this.apiUrl + 'total-sales');
-  }
-
-  getVolumePerRegion(): Observable<any> {
-    return this.http.get(this.apiUrl + 'volume-per-region');
-  }
-
-  getSalesPerRegion(): Observable<any> {
-    return this.http.get(this.apiUrl + 'sales-per-region');
+    return this.http.get(this.apiUrl + '/api/total-sales');
   }
 
   getPartnersData(): Observable<any> {
     return this.http.get(this.apiUrl + 'partners-data');
+  }
+
+  getPartnersTableData(): Observable<any> {
+    return this.http.get(this.apiUrl + '/api/partners-table');
+  }
+
+  getVolumePerRegion(): Observable<any> {
+    return this.http.get(this.apiUrl + '/api/volume-per-region');
+  }
+
+  getSalesPerRegion(): Observable<any> {
+    return this.http.get(this.apiUrl + '/api/sales-per-region');
   }
 }

@@ -1,21 +1,30 @@
-<table>
-    <thead>
-      <tr>
-        <th (click)="sort('partner', 'asc')">Partner</th>
-        <th (click)="sort('totalSales', 'desc')">Total Sales</th>
-        <th (click)="sort('transactionCount', 'desc')">Transaction Count</th>
-        <th (click)="sort('mostActiveRegion', 'asc')">Most Active Region</th>
-        <th (click)="sort('mostActiveCountry', 'asc')">Most Active Country</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let partner of partnersData">
-        <td>{{ partner.partner }}</td>
-        <td>{{ partner.totalSales }}</td>
-        <td>{{ partner.transactionCount }}</td>
-        <td>{{ partner.mostActiveRegion }}</td>
-        <td>{{ partner.mostActiveCountry }}</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="partner_name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Partner Name</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.partner_name }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="total_sales">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Total Sales</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.total_sales }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="transaction_volume">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Transaction Volume</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.transaction_volume }}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
   
+  <div class="export-button-container">
+    <button mat-raised-button color="primary" (click)="exportDataAsCSV()">
+      Export Data as CSV
+    </button>
+  </div>
+</div>
+
