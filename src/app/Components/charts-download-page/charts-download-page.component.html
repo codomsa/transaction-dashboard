@@ -1,0 +1,43 @@
+<div class="row mt-5">
+    <div class="col-md-6">
+      <h3 class="chart-title">Sales by Region</h3>
+      <div class="chart-container">
+        <div id="sales-region-chart-wrapper" class="chart-wrapper">
+          <app-pie-chart-sales-region></app-pie-chart-sales-region>
+        </div>
+        <button (click)="downloadSalesRegionChart()" class="btn btn-primary download-btn mt-4">Download Sales Region Chart</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-title">Transaction Volume by Region</h3>
+      <div class="chart-container">
+        <div id="volume-region-chart-wrapper" class="chart-wrapper">
+          <app-pie-chart-volume-region></app-pie-chart-volume-region>
+        </div>
+        <button (click)="downloadVolumeRegionChart()" class="btn btn-primary download-btn mt-4">Download Volume Region Chart</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <h3 class="chart-title">Total Sales</h3>
+      <div class="chart-container">
+        <div id="total-sales-chart-wrapper" class="chart-wrapper">
+          <app-bar-chart-total-sales></app-bar-chart-total-sales>
+        </div>
+        <button (click)="downloadTotalSalesChart()" class="btn btn-primary download-btn mt-4">Download Total Sales Chart</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-title">Transaction Volume</h3>
+      <div class="chart-container">
+        <div id="transaction-volume-chart-wrapper" class="chart-wrapper">
+          <app-bar-chart-transaction-volume></app-bar-chart-transaction-volume>
+        </div>
+        <button (click)="downloadTransactionVolumeChart()" class="btn btn-primary download-btn mt-4">Download Transaction Volume Chart</button>
+      </div>
+    </div>
+  </div>
+  
+  

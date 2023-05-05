@@ -1,0 +1,20 @@
+.chart-container {
+    position: relative;
+  }
+  
+  .download-btn {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    margin: -60px;
+  }
+
+  .chart-title {
+    text-align: center;
+  }
+
+  .chart-wrapper {
+    margin-bottom: 50px;
+  }
+  
+  

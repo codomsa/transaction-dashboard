@@ -7,7 +7,9 @@
     <div class="title-container">
       <h1>Transaction Dashboard</h1>
     </div>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4wz4AS+4P6gU08F" crossorigin="anonymous">
+    
+
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,6 +26,9 @@
             <li class="nav-item">
               <a class="nav-link" (click)="changeView('DataTable')">Data Table</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="changeView('ChartsDownloadPage')">Charts Download</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -36,12 +41,12 @@
         <div class="col-lg-6">
           <h3 class="text-center">Total Sales</h3>
           <app-bar-chart-total-sales></app-bar-chart-total-sales>
-          <button (click)="downloadTotalSalesChart()" class="btn btn-primary mt-2">Download as PNG</button>
+          
         </div>
         <div class="col-lg-6">
           <h3 class="text-center">Transaction Volume</h3>
           <app-bar-chart-transaction-volume></app-bar-chart-transaction-volume>
-          <button (click)="downloadTransactionVolumeChart()" class="btn btn-primary mt-2">Download as PNG</button>
+          
         </div>
       </div>
 
@@ -49,14 +54,15 @@
         <div class="col-lg-6">
           <h3 class="text-center">Sales by Region</h3>
           <app-pie-chart-sales-region></app-pie-chart-sales-region>
-          <button (click)="downloadSalesRegionChart()" class="btn btn-primary mt-2">Download as PNG</button>
+          
         </div>
         <div class="col-lg-6">
           <h3 class="text-center">Transaction Volume by Region</h3>
           <app-pie-chart-volume-region></app-pie-chart-volume-region>
-          <button (click)="downloadVolumeRegionChart()" class="btn btn-primary mt-2">Download as PNG</button>
+          
         </div>
       </div>
+  
       <div *ngIf="view === 'TransactionDashboard' || view === 'DataTable'">
         <div class="row mt-5">
           <div class="col-lg-12">
@@ -64,8 +70,13 @@
             <app-partners-table></app-partners-table>
           </div>
         </div>
-      </div>
+       </div>
+    
+       <div *ngIf="view === 'ChartsDownloadPage'">
+         <app-charts-download-page></app-charts-download-page>
+       </div>
     </div>
-</body>
-</html>
-
+  </body>
+  </html>
+    
+           

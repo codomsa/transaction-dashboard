@@ -1,5 +1,6 @@
 <div #salesRegionChart style="display: block">
   <ngx-charts-pie-chart
+    id="sales-region-chart"
     [view]="view"
     [scheme]="colorScheme"
     [results]="data"
@@ -11,7 +12,6 @@
     [gradient]="false"
     [animations]="true">
   </ngx-charts-pie-chart>
-  <button (click)="downloadSalesRegionChart()" class="btn btn-primary mt-2">Download as PNG</button>
 </div>
 
 

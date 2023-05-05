@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ApiService } from '../api.service';
+import { ApiService } from '../../shared/services/api.service';
 import { Color, ScaleType, LegendPosition } from '@swimlane/ngx-charts';
 declare const domtoimage: any;
 import { saveAs } from 'file-saver';
+import * as htmlToImage from 'html-to-image';
 
 @Component({
   selector: 'app-pie-chart-volume-region',
@@ -34,14 +35,5 @@ export class PieChartVolumeRegionComponent implements OnInit {
         };
       });
     });
-  }
-
-  @ViewChild('volumeRegionChart') volumeRegionChart!: ElementRef;
-
-  downloadVolumeRegionChart() {
-    domtoimage.toBlob(this.volumeRegionChart.nativeElement)
-      .then((blob: Blob) => {
-        saveAs(blob, 'volume-region-chart.png');
-      });
   }
 }

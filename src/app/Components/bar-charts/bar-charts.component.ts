@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { saveSvgAsPng } from 'save-svg-as-png';
+
 
 @Component({
   selector: 'app-bar-charts',
@@ -11,3 +11,4 @@ export class BarChartsComponent {
 
 
 }
+

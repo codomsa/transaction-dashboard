@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnChanges} from '@angular/core';
-import { ApiService } from '../api.service';
+import { ApiService } from '../../shared/services/api.service';
 import { Color, ScaleType, LegendPosition } from '@swimlane/ngx-charts';
+
 
 @Component({
   selector: 'app-bar-chart-total-sales',

@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ApiService } from '../api.service';
+import { ApiService } from '../../shared/services/api.service';
 import { Color, ScaleType, LegendPosition } from '@swimlane/ngx-charts';
 declare const domtoimage: any;
 import { saveAs } from 'file-saver';
+import * as htmlToImage from 'html-to-image';
 
 @Component({
   selector: 'app-pie-chart-sales-region',
@@ -34,12 +35,5 @@ export class PieChartSalesRegionComponent implements OnInit {
       });
     });
   }
-  @ViewChild('salesRegionChart') salesRegionChart!: ElementRef;
 
-  downloadSalesRegionChart() {
-    domtoimage.toBlob(this.salesRegionChart.nativeElement)
-      .then((blob: Blob) => {
-        saveAs(blob, 'sales-region-chart.png');
-      });
-  }
 }
