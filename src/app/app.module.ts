@@ -16,6 +16,8 @@ import { PieChartVolumeRegionComponent } from './pie-chart-volume-region/pie-cha
 import { PieChartSalesRegionComponent } from './pie-chart-sales-region/pie-chart-sales-region.component';
 import { PartnersTableComponent } from './partners-table/partners-table.component';
 
+import { DataTableComponent } from './data-table/data-table.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { PartnersTableComponent } from './partners-table/partners-table.componen
     BarChartTotalSalesComponent,
     PieChartVolumeRegionComponent,
     PieChartSalesRegionComponent,
-    PartnersTableComponent
+    PartnersTableComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
