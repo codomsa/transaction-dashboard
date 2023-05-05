@@ -66,11 +66,12 @@
       <div *ngIf="view === 'TransactionDashboard' || view === 'DataTable'">
         <div class="row mt-5">
           <div class="col-lg-12">
-            <h3 class="text-center"></h3>
+            <h3 class="text-center" style="margin-top: 100px;">&nbsp;</h3>
             <app-partners-table></app-partners-table>
           </div>
         </div>
-       </div>
+      </div>
+      
     
        <div *ngIf="view === 'ChartsDownloadPage'">
          <app-charts-download-page></app-charts-download-page>
